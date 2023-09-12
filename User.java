@@ -8,12 +8,10 @@ public class User {
     }
 
     public String getInitials() {
-        // Check if either first name or last name is null or empty
         if (firstName == null || firstName.isEmpty() || lastName == null || lastName.isEmpty()) {
             return "";
         }
 
-        // Extract the first character of each name and format it as "X. Y."
         char firstInitial = firstName.charAt(0);
         char lastInitial = lastName.charAt(0);
 
