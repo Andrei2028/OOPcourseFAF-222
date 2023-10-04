@@ -1,6 +1,6 @@
 public class Main {
     public static void main(String[] args) {
-        User user1 = new User("Sarov", "Andre");
+        User user1 = new User("Sarov", "Andrei");
         User user2 = new User("Miley", "Cyrus");
 
         System.out.println(user1.getInitials());
