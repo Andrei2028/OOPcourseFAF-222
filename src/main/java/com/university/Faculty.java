@@ -1,4 +1,4 @@
-package com.university;
+package src.main.java.com.university;
 
 import java.util.ArrayList;
 import java.util.List;
