@@ -1,5 +1,6 @@
 package com.university;
 
+import java.sql.Date;
 import java.util.Scanner;
 
 public class Main {
@@ -55,7 +56,7 @@ public class Main {
                     // Date enrollmentDate = parseDate(enrollmentDateStr);
                     // Date dateOfBirth = parseDate(dateOfBirthStr);
 
-                    Student student = new Student(firstName, lastName, email, enrollmentDate, dateOfBirth);
+                    Student student = new Student(firstName, lastName, email, Date.valueOf(enrollmentDateStr), Date.valueOf(dateOfBirthStr));
 
                     System.out.print("Enter faculty abbreviation to add the student to: ");
                     String facultyAbbreviationToAdd = scanner.nextLine();
