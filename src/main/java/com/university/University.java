@@ -1,7 +1,6 @@
-package src.main.java.com.university;
+package com.university;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class University {
     private String name;

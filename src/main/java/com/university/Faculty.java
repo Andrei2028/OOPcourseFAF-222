@@ -1,4 +1,4 @@
-package src.main.java.com.university;
+package com.university;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,14 +16,6 @@ public class Faculty {
         this.students = new ArrayList<>();
     }
 
-    public void addStudent(Student student) {
-        students.add(student);
-    }
-
-    public void graduateStudent(Student student) {
-        students.remove(student);
-    }
-
     public String getName() {
         return name;
     }
@@ -38,6 +30,10 @@ public class Faculty {
 
     public StudyField getStudyField() {
         return studyField;
+    }
+
+    public void addStudent(Student student) {
+        students.add(student);
     }
 
     @Override

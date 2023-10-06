@@ -21,10 +21,10 @@ public class Main {
             System.out.println("8. Display faculties by field");
             System.out.println("0. Exit");
             System.out.print("Enter your choice: ");
-            
+
             choice = scanner.nextInt();
             scanner.nextLine();  // Consume the newline character
-            
+
             switch (choice) {
                 case 1:
                     // Create a new faculty
@@ -50,17 +50,17 @@ public class Main {
                     String enrollmentDateStr = scanner.nextLine();
                     System.out.print("Enter date of birth (yyyy-MM-dd): ");
                     String dateOfBirthStr = scanner.nextLine();
-                    
+
                     // Parse date strings to Date objects (implement this conversion)
                     // Date enrollmentDate = parseDate(enrollmentDateStr);
                     // Date dateOfBirth = parseDate(dateOfBirthStr);
-                    
+
                     Student student = new Student(firstName, lastName, email, enrollmentDate, dateOfBirth);
-                    
+
                     System.out.print("Enter faculty abbreviation to add the student to: ");
                     String facultyAbbreviationToAdd = scanner.nextLine();
                     Faculty targetFaculty = university.findFacultyByAbbreviation(facultyAbbreviationToAdd);
-                    
+
                     if (targetFaculty != null) {
                         targetFaculty.addStudent(student);
                         System.out.println("Student added to " + targetFaculty.getName());
@@ -85,7 +85,7 @@ public class Main {
                     System.out.print("Enter student email to find the faculty: ");
                     String studentEmailToFind = scanner.nextLine();
                     Faculty foundFaculty = university.findFacultyByStudentEmail(studentEmailToFind);
-                    
+
                     if (foundFaculty != null) {
                         System.out.println("Student with email " + studentEmailToFind + " belongs to " + foundFaculty.getName());
                     } else {
@@ -112,7 +112,7 @@ public class Main {
                     break;
             }
         } while (choice != 0);
-        
+
         scanner.close();
     }
 }

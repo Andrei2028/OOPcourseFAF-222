@@ -1,4 +1,4 @@
-package src.main.java.com.university;
+package com.university;
 
 public enum StudyField {
     Mechanical_Engineering,

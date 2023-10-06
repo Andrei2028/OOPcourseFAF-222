@@ -1,4 +1,4 @@
-package src.main.java.com.university;
+package com.university;
 
 import java.util.Date;
 
@@ -20,6 +20,4 @@ public class Student {
     public String getEmail() {
         return email;
     }
-
-    // Other getters and setters as needed
 }
