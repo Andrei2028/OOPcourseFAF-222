@@ -1,6 +1,5 @@
 package com.university;
 
-import java.sql.Date;
 import java.util.Scanner;
 
 public class Main {
@@ -29,53 +28,18 @@ public class Main {
             switch (choice) {
                 case 1:
                     // Create a new faculty
-                    System.out.print("Enter faculty name: ");
-                    String facultyName = scanner.nextLine();
-                    System.out.print("Enter faculty abbreviation: ");
-                    String facultyAbbreviation = scanner.nextLine();
-                    System.out.print("Enter study field (e.g., Mechanical_Engineering): ");
-                    String studyFieldStr = scanner.nextLine();
-                    StudyField studyField = StudyField.valueOf(studyFieldStr);
-                    Faculty faculty = new Faculty(facultyName, facultyAbbreviation, studyField);
-                    university.createFaculty(faculty);
+                    university.addFaculty();
                     break;
                 case 2:
                     // Add a student to a faculty
-                    System.out.print("Enter student first name: ");
-                    String firstName = scanner.nextLine();
-                    System.out.print("Enter student last name: ");
-                    String lastName = scanner.nextLine();
-                    System.out.print("Enter student email: ");
-                    String email = scanner.nextLine();
-                    System.out.print("Enter enrollment date (yyyy-MM-dd): ");
-                    String enrollmentDateStr = scanner.nextLine();
-                    System.out.print("Enter date of birth (yyyy-MM-dd): ");
-                    String dateOfBirthStr = scanner.nextLine();
-
-                    // Parse date strings to Date objects (implement this conversion)
-                    // Date enrollmentDate = parseDate(enrollmentDateStr);
-                    // Date dateOfBirth = parseDate(dateOfBirthStr);
-
-                    Student student = new Student(firstName, lastName, email, Date.valueOf(enrollmentDateStr), Date.valueOf(dateOfBirthStr));
-
-                    System.out.print("Enter faculty abbreviation to add the student to: ");
-                    String facultyAbbreviationToAdd = scanner.nextLine();
-                    Faculty targetFaculty = university.findFacultyByAbbreviation(facultyAbbreviationToAdd);
-
-                    if (targetFaculty != null) {
-                        targetFaculty.addStudent(student);
-                        System.out.println("Student added to " + targetFaculty.getName());
-                    } else {
-                        System.out.println("Faculty not found with abbreviation: " + facultyAbbreviationToAdd);
-                    }
+                    addStudent();
                     break;
                 case 3:
                     // Graduate a student
                     // Implement graduation logic
                     break;
                 case 4:
-                    // Display current enrolled students
-                    // Implement display logic
+                    university.displayStudents();
                     break;
                 case 5:
                     // Display graduates
@@ -115,5 +79,11 @@ public class Main {
         } while (choice != 0);
 
         scanner.close();
+    }
+
+    private static void addStudent(){
+        Student student = new Student();
+        University university = new University("My University");
+        student = university.addStudent(student);
     }
 }
