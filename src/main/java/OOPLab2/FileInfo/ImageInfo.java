@@ -2,7 +2,7 @@ package OOPLab2.FileInfo;
 
 import java.nio.file.attribute.FileTime;
 
-public class ImageInfo extends FileInfo {
+public class ImageInfo extends FileInfo implements ImageInfo {
     private int width;
     private int height;
 

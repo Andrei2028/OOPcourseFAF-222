@@ -5,7 +5,6 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        //TODO put your directory
         String folderPath = "/path/to/your/directory";
         Path directory = Path.of(folderPath);
 
@@ -13,7 +12,6 @@ public class Main {
         Scanner in = new Scanner(System.in);
         String navigate = "";
 
-        //TODO change this if u want
         while (!navigate.equals("q")){
             System.out.print("\nWelcome UTM GIT!\n" +
                     "What do u want to do?\n\n" +
