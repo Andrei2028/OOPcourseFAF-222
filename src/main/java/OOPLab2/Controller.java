@@ -1,12 +1,6 @@
 package OOPLab2;
 
-import OOPLab2.FileInfo.FileInfo;
-import OOPLab2.FileInfo.ImageInfo;
-import OOPLab2.FileInfo.ProgramInfo;
-import OOPLab2.FileInfo.TextInfo;
-import OOPLab2.FileManager.FileManager;
-import OOPLab2.FileManager.FolderManager;
-import OOPLab2.FileManager.MetadataManager;
+import static OOPLab2.FileManager.MetadataManager.*;
 
 import java.io.IOException;
 import java.nio.file.FileVisitOption;
@@ -16,7 +10,13 @@ import java.util.ArrayList;
 import java.util.EnumSet;
 import java.util.List;
 
-import static OOPLab2.FileManager.MetadataManager.readMetadataFromFile;
+import OOPLab2.FileInfo.FileInfo;
+import OOPLab2.FileInfo.ImageInfo;
+import OOPLab2.FileInfo.ProgramInfo;
+import OOPLab2.FileInfo.TextInfo;
+import OOPLab2.FileManager.FileManager;
+import OOPLab2.FileManager.FolderManager;
+import OOPLab2.FileManager.MetadataManager;
 
 public class Controller {
 
@@ -24,7 +24,6 @@ public class Controller {
         try {
             List<String> metadataList = new ArrayList<>();
 
-            // Creating an instance of FolderManager.FolderVisitor and passing metadataList
             Files.walkFileTree(directory, EnumSet.noneOf(FileVisitOption.class), Integer.MAX_VALUE, new FolderManager.FolderVisitor(metadataList));
 
             MetadataManager.saveMetadataToFile(metadataList);
