@@ -2,7 +2,6 @@ package OOPlab3;
 
 public class MainLab3 {
     public static void main(String[] args) {
-        // Example using ArrayStack
         Stack<Integer> arrayStack = new ArrayStack<>();
         arrayStack.push(1);
         arrayStack.push(2);
@@ -15,7 +14,6 @@ public class MainLab3 {
             System.out.println("Popped from ArrayStack: " + arrayStack.pop());
         }
 
-        // Example using LinkedListStack
         Stack<String> linkedListStack = new LinkedListStack<>();
         linkedListStack.push("Hello");
         linkedListStack.push("World");
