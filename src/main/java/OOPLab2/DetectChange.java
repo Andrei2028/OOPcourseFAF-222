@@ -1,7 +1,6 @@
 package OOPLab2;
 import java.util.List;
 import java.util.Map;
-import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
 public class DetectChange {
@@ -51,7 +50,7 @@ public class DetectChange {
             return parts[0].replace("File: ", "");
         } else {
 
-            return "Unknown"; // Change this to your desired default value.
+            return "True";
         }
     }
 }
