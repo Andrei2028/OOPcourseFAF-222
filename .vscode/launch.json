@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "MainLab3",
+      "request": "launch",
+      "mainClass": "OOPlab3.MainLab3",
+      "projectName": "OOPcourseFAF-222-8_767bf606"
+    },
+    {
+      "type": "java",
       "name": "Main",
       "request": "launch",
       "mainClass": "OOPLab2.Main",

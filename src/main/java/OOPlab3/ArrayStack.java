@@ -1,5 +1,4 @@
-// ArrayStack.java
-package lab3;
+package OOPlab3;
 
 import java.util.ArrayList;
 

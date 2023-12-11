@@ -1,4 +1,4 @@
-package lab3;
+package OOPlab3;
 
 public class MainLab3 {
     public static void main(String[] args) {
