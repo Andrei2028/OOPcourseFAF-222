@@ -1,3 +1,6 @@
+// ArrayStack.java
+package lab3;
+
 import java.util.ArrayList;
 
 public class ArrayStack<T> implements Stack<T> {
